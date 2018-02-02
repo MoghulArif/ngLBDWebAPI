@@ -59,3 +59,10 @@ C:\Lunchbox\ngLBDWebAPI-1\ngLBDWebAPI\bin\EntityFramework.dll
 C:\Lunchbox\ngLBDWebAPI-1\ngLBDWebAPI\bin\EntityFramework.SqlServer.dll
 C:\Lunchbox\ngLBDWebAPI-1\ngLBDWebAPI\bin\EntityFramework.xml
 C:\Lunchbox\ngLBDWebAPI-1\ngLBDWebAPI\bin\EntityFramework.SqlServer.xml
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\EntityFramework.dll
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\EntityFramework.SqlServer.dll
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\EntityFramework.xml
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\EntityFramework.SqlServer.xml
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\System.Web.Cors.dll
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\System.Web.Http.Cors.dll
+D:\ismail\Applications\ngLBD\ngLBDWebAPI\ngLBDWebAPI\bin\System.Web.Http.Cors.xml
