@@ -99,6 +99,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BGEnquiryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
+      <LastGenOutput>BGEnquiryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BGEnquiryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
+      <LastGenOutput>BGEnquiryModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Models\RegistrationModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -114,10 +124,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BGEnquiryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BGEnquiryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BGEnquiryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BGEnquiryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BGEnquiryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="home.cs">
+      <DependentUpon>BGEnquiryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\Register.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
@@ -146,6 +175,13 @@
     </EntityDeploy>
     <Content Include="Models\RegistrationModel.edmx.diagram">
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="BGEnquiryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BGEnquiryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BGEnquiryModel.edmx.diagram">
+      <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

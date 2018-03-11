@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BGEnqiryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="home">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="locDubaiBusines" Type="Boolean" Nullable="false" />
+    <Property Name="locDubaiSilicon" Type="Boolean" Nullable="false" />
+    <Property Name="Budget400K700K" Type="Boolean" Nullable="false" />
+    <Property Name="Budget700K1000K" Type="Boolean" Nullable="false" />
+    <Property Name="Budget1000K1250K" Type="Boolean" Nullable="false" />
+    <Property Name="Budget1250K1500K" Type="Boolean" Nullable="false" />
+    <Property Name="Studio" Type="Boolean" Nullable="false" />
+    <Property Name="OneBed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoBed" Type="Boolean" Nullable="false" />
+    <Property Name="Retail" Type="Boolean" Nullable="false" />
+    <Property Name="Immed" Type="Boolean" Nullable="false" />
+    <Property Name="Months3to6" Type="Boolean" Nullable="false" />
+    <Property Name="Months6to12" Type="Boolean" Nullable="false" />
+    <Property Name="Months12to18" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BGEnqiryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="homes" EntityType="Self.home" />
+  </EntityContainer>
+</Schema>

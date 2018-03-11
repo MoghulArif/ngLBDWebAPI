@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BGEnqiryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="home">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="800" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="locDubaiBusines" Type="bit" Nullable="false" />
+    <Property Name="locDubaiSilicon" Type="bit" Nullable="false" />
+    <Property Name="Budget400K700K" Type="bit" Nullable="false" />
+    <Property Name="Budget700K1000K" Type="bit" Nullable="false" />
+    <Property Name="Budget1000K1250K" Type="bit" Nullable="false" />
+    <Property Name="Budget1250K1500K" Type="bit" Nullable="false" />
+    <Property Name="Studio" Type="bit" Nullable="false" />
+    <Property Name="OneBed" Type="bit" Nullable="false" />
+    <Property Name="TwoBed" Type="bit" Nullable="false" />
+    <Property Name="Retail" Type="bit" Nullable="false" />
+    <Property Name="Immed" Type="bit" Nullable="false" />
+    <Property Name="Months3to6" Type="bit" Nullable="false" />
+    <Property Name="Months6to12" Type="bit" Nullable="false" />
+    <Property Name="Months12to18" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BGEnqiryModelStoreContainer">
+    <EntitySet Name="home" EntityType="Self.home" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

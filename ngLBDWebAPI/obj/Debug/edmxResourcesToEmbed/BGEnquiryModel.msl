@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BGEnqiryModelStoreContainer" CdmEntityContainer="BGEnqiryEntities">
+    <EntitySetMapping Name="homes">
+      <EntityTypeMapping TypeName="BGEnqiryModel.home">
+        <MappingFragment StoreEntitySet="home">
+          <ScalarProperty Name="Months12to18" ColumnName="Months12to18" />
+          <ScalarProperty Name="Months6to12" ColumnName="Months6to12" />
+          <ScalarProperty Name="Months3to6" ColumnName="Months3to6" />
+          <ScalarProperty Name="Immed" ColumnName="Immed" />
+          <ScalarProperty Name="Retail" ColumnName="Retail" />
+          <ScalarProperty Name="TwoBed" ColumnName="TwoBed" />
+          <ScalarProperty Name="OneBed" ColumnName="OneBed" />
+          <ScalarProperty Name="Studio" ColumnName="Studio" />
+          <ScalarProperty Name="Budget1250K1500K" ColumnName="Budget1250K1500K" />
+          <ScalarProperty Name="Budget1000K1250K" ColumnName="Budget1000K1250K" />
+          <ScalarProperty Name="Budget700K1000K" ColumnName="Budget700K1000K" />
+          <ScalarProperty Name="Budget400K700K" ColumnName="Budget400K700K" />
+          <ScalarProperty Name="locDubaiSilicon" ColumnName="locDubaiSilicon" />
+          <ScalarProperty Name="locDubaiBusines" ColumnName="locDubaiBusines" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
