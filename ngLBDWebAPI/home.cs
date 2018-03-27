@@ -33,5 +33,7 @@ namespace ngLBDWebAPI
         public bool Months3to6 { get; set; }
         public bool Months6to12 { get; set; }
         public bool Months12to18 { get; set; }
+        public Nullable<System.DateTime> TimeStamp { get; set; }
+        public Nullable<byte> SourceID { get; set; }
     }
 }

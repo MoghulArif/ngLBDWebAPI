@@ -26,5 +26,6 @@ namespace ngLBDWebAPI
         }
     
         public virtual DbSet<home> homes { get; set; }
+        public virtual DbSet<loginDB> loginDBs { get; set; }
     }
 }

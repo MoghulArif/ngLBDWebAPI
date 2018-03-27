@@ -28,9 +28,20 @@
           <Property Name="Months3to6" Type="bit" Nullable="false" />
           <Property Name="Months6to12" Type="bit" Nullable="false" />
           <Property Name="Months12to18" Type="bit" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="SourceID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="loginDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="pswrd" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityContainer Name="BGEnqiryModelStoreContainer">
           <EntitySet Name="home" EntityType="Self.home" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="loginDB" EntityType="Self.loginDB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -59,10 +70,21 @@
           <Property Name="Months3to6" Type="Boolean" Nullable="false" />
           <Property Name="Months6to12" Type="Boolean" Nullable="false" />
           <Property Name="Months12to18" Type="Boolean" Nullable="false" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="SourceID" Type="Byte" />
         </EntityType>
         <EntityContainer Name="BGEnqiryEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="homes" EntityType="Self.home" />
+          <EntitySet Name="loginDBs" EntityType="BGEnqiryModel.loginDB" />
         </EntityContainer>
+        <EntityType Name="loginDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pswrd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -72,6 +94,8 @@
           <EntitySetMapping Name="homes">
             <EntityTypeMapping TypeName="BGEnqiryModel.home">
               <MappingFragment StoreEntitySet="home">
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
                 <ScalarProperty Name="Months12to18" ColumnName="Months12to18" />
                 <ScalarProperty Name="Months6to12" ColumnName="Months6to12" />
                 <ScalarProperty Name="Months3to6" ColumnName="Months3to6" />
@@ -91,6 +115,15 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="loginDBs">
+            <EntityTypeMapping TypeName="BGEnqiryModel.loginDB">
+              <MappingFragment StoreEntitySet="loginDB">
+                <ScalarProperty Name="pswrd" ColumnName="pswrd" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

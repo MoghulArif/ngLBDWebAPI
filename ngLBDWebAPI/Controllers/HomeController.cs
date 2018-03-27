@@ -28,7 +28,7 @@ namespace ngLBDWebAPI.Controllers
 
         //}
 
-        public int Post(HomeModel homeModel)
+        public string Post(HomeModel homeModel)
         {
             int id;
             try
@@ -64,91 +64,100 @@ namespace ngLBDWebAPI.Controllers
 
                    
                 }
-                return id;
+                return "Your Reference Number is: " + id;
+                
 
             }
             catch(Exception ex)
             {
-                return -1;
+                return "Error " + -1 + ex.Message;
             }
             
         }
 
-        public List<HomeModel> Get()
+        //public List<HomeModel> Get()
+
+        public string Get()
         {
-            List<HomeModel> hm = new List<HomeModel>();
-            string fn = "";
-            string mob = "";
 
-            using (BGEnqiryEntities ctx = new BGEnqiryEntities())
-            {
-                //hm = (from c in ctx.homes
-                //             //join s in ctx.States
-                //             //on c.StateId equals s.StateId
-                //             //where c.Pincode == iPincode
-                //             select new
-                //             {
-                //                 c.firstName,
-                //                 c.lastName
+            //List<HomeModel> hm = new List<HomeModel>();
+            //string fn = "";
+            //string mob = "";
 
-                //             }).ToList<HomeModel>();
+            //using (BGEnqiryEntities ctx = new BGEnqiryEntities())
+            //{
+            //    //hm = (from c in ctx.homes
+            //    //             //join s in ctx.States
+            //    //             //on c.StateId equals s.StateId
+            //    //             //where c.Pincode == iPincode
+            //    //             select new
+            //    //             {
+            //    //                 c.firstName,
+            //    //                 c.lastName
 
-                var query = (from c in ctx.homes
-                             select c);
+            //    //             }).ToList<HomeModel>();
 
-                if(query != null)
-                {
-                    foreach(home h in query)
-                    {
-                        fn = h.firstName;
-                        mob = h.Mobile;
-                        hm.Add(new HomeModel() { firstName = fn, mobile = mob });
-                    }
-                }
+            //    var query = (from c in ctx.homes
+            //                 select c);
 
-                return hm;
+            //    if (query != null)
+            //    {
+            //        foreach (home h in query)
+            //        {
+            //            fn = h.firstName;
+            //            mob = h.Mobile;
+            //            hm.Add(new HomeModel() { firstName = fn, mobile = mob });
+            //        }
+            //    } 
+            
+            //    return hm;
 
-             
-            }
 
-            //return "h1";
+            //}
+
+            return "WebAPI is working!";
         }
 
-        public HomeModel Get(int id) 
+        public int Get(int i)
         {
-            HomeModel hm = new HomeModel();
-            string fn = "";
-            string mob = "";
-
-            using (BGEnqiryEntities ctx = new BGEnqiryEntities())
-            {
-                //hm = (from c in ctx.homes
-                //             //join s in ctx.States
-                //             //on c.StateId equals s.StateId
-                //             //where c.Pincode == iPincode
-                //             select new
-                //             {
-                //                 c.firstName,
-                //                 c.lastName
-
-                //             }).ToList<HomeModel>();
-
-                var query = (from c in ctx.homes
-                             where c.Id == id
-                             select c);
-
-                if (query != null)
-                {
-                    foreach (home h in query)
-                    {
-                        fn = h.firstName;
-                        mob = h.Mobile;
-                        hm = new HomeModel() { firstName = fn, mobile = mob };
-                    }
-                }
-
-                return hm;
-            }
+            return i;
         }
+
+        //public HomeModel Get(int id) 
+        //{
+        //    HomeModel hm = new HomeModel();
+        //    string fn = "";
+        //    string mob = "";
+
+        //    using (BGEnqiryEntities ctx = new BGEnqiryEntities())
+        //    {
+        //        //hm = (from c in ctx.homes
+        //        //             //join s in ctx.States
+        //        //             //on c.StateId equals s.StateId
+        //        //             //where c.Pincode == iPincode
+        //        //             select new
+        //        //             {
+        //        //                 c.firstName,
+        //        //                 c.lastName
+
+        //        //             }).ToList<HomeModel>();
+
+        //        var query = (from c in ctx.homes
+        //                     where c.Id == id
+        //                     select c);
+
+        //        if (query != null)
+        //        {
+        //            foreach (home h in query)
+        //            {
+        //                fn = h.firstName;
+        //                mob = h.Mobile;
+        //                hm = new HomeModel() { firstName = fn, mobile = mob }; 
+        //            }
+        //        }
+
+        //        return hm;
+        //    }
+        //}
     }
 }

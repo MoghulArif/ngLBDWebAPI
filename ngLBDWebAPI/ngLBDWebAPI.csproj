@@ -120,7 +120,9 @@
       <DependentUpon>RegistrationModel.edmx</DependentUpon>
       <LastGenOutput>RegistrationModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -140,13 +142,18 @@
       <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="home.cs">
       <DependentUpon>BGEnquiryModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="loginDB.cs">
+      <DependentUpon>BGEnquiryModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\loginModel.cs" />
     <Compile Include="Models\Register.cs">
       <DependentUpon>RegistrationModel.tt</DependentUpon>
     </Compile>
@@ -183,6 +190,8 @@
     <Content Include="BGEnquiryModel.edmx.diagram">
       <DependentUpon>BGEnquiryModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
